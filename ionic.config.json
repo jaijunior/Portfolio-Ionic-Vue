@@ -1,0 +1,7 @@
+{
+  "name": "JavaJogger",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
