@@ -1,28 +1,107 @@
 <template>
   <ion-page>
     <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
+    
     </ion-header>
-
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+       <ion-grid>
+          <ion-row class="ion-justify-content-between">
+            <ion-col size="4" offset="1">
+              <ion-thumbnail >
+                <img alt="JaiJunior Icon" :src="logo" />
+              </ion-thumbnail>
+            </ion-col>
+            <ion-col size="4" offset="1"> 
+              <social-network-vue/>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col 
+            size-xs="12"
+            size-sm="12" 
+            size-xl="10"
+            offset-xl="1"            
+            size-md="8" 
+            offset-md="2" 
+            size-lg="8" 
+            offset-lg="2">
+              <biography-card-vue/>
+            </ion-col>
+            
+          </ion-row>
+          <ion-row>
+            <ion-col size-xs="6" size-md="3">
+              <gif-card-vue/>
+            </ion-col>
+            <ion-col size-xs="6" size-md="3">
+              <gif-card-vue/>
+            </ion-col>
+            <ion-col size-xs="6" size-md="3">
+              <gif-card-vue/>
+            </ion-col>
+            <ion-col size-xs="6" size-md="3">
+              <gif-card-vue/>
+            </ion-col>
+          </ion-row>
+       </ion-grid>
     </ion-content>
   </ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+<script>
+import SocialNetworkVue from '../components/SocialNetwork.vue';
+import BiographyCardVue from '../components/BiographyCard.vue';
+import GifCardVue from '../components/GifCard.vue';
+import { IonContent,
+          IonHeader,
+          IonPage,
+          IonTitle, 
+          IonToolbar, 
+          IonRow, 
+          IonCol, 
+          IonItem,
+          IonLabel,
+          IonGrid,
+          IonCard,
+          IonCardHeader,
+          IonCardSubtitle,
+          IonAccordionGroup,
+          IonAccordion,
+          IonThumbnail } from '@ionic/vue';
+import { IonIcon } from '@ionic/vue';
+
+import logo from '@/assets/jaijunior_logo.png';
+
+export default {
+  components: {
+    IonContent, 
+    IonHeader, 
+    IonPage, 
+    IonTitle, 
+    IonToolbar, 
+    IonIcon,
+    IonRow,
+    IonCol,
+    IonItem,
+    IonLabel,
+    IonGrid,
+    IonCard,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonAccordionGroup,
+    IonAccordion,
+    IonThumbnail,
+    
+    SocialNetworkVue,
+    BiographyCardVue,
+    GifCardVue
+  },
+  data() {
+    return {
+      logo
+    };
+  },
+}
 </script>
 
 <style scoped>
@@ -52,5 +131,10 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue
 
 #container a {
   text-decoration: none;
+}
+
+.card-image {
+  max-height: 300px;
+  width: 100%;
 }
 </style>

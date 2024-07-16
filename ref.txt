@@ -1,0 +1,5 @@
+DIA 1:
+    https://vuejs.org/guide/essentials/component-basics.html
+    https://ionicframework.com/docs/vue/quickstart
+    https://ionicframework.com/docs/components
+    https://learnvue.co/articles/vue-3-global-component
