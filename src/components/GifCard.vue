@@ -1,16 +1,16 @@
 <template>
-  <ion-card >
+  <ion-card>
     <img 
-        alt="Silhouette of mountains" 
-        src="https://31.media.tumblr.com/4abdd6188a5f6056ef8e706d536b9528/tumblr_ms35q4JhSy1rm6gkpo1_500.gif" 
+        :alt="img_alt" 
+        :src="img_src" 
         class="card-img"/>
     <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        <ion-card-title>{{ title }}</ion-card-title>
+        <ion-card-subtitle>{{ subtitle }}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
+        {{ content }}
     </ion-card-content>
     </ion-card>
 </template>
@@ -22,7 +22,27 @@ export default {
 
     },
     props: {
-
+        img_alt: {
+            type:String,
+            required:false
+        },
+        img_src: {
+            type:String,
+            required:false
+        },
+        title: {
+            type: String,
+            required: false
+        },
+        subititle: {
+            type: String,
+            required: false
+        },
+        content: {
+            type: String,
+            required: false
+        }
+        
     }
 }
 </script>

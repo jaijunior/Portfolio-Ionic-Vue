@@ -16,13 +16,14 @@
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col 
+            <ion-col
+            class="biography-text-column"
             size-xs="12"
             size-sm="12" 
-            size-xl="10"
-            offset-xl="1"            
-            size-md="8" 
-            offset-md="2" 
+            size-xl="8"
+            offset-xl="2"            
+            size-md="10" 
+            offset-md="1" 
             size-lg="8" 
             offset-lg="2">
               <biography-card-vue/>
@@ -30,16 +31,16 @@
             
           </ion-row>
           <ion-row>
-            <ion-col size-xs="6" size-md="3">
+            <ion-col size-xs="6" size-md="3" size-lg="3" size-xl="2" offset-xl="2">
               <gif-card-vue/>
             </ion-col>
-            <ion-col size-xs="6" size-md="3">
+            <ion-col size-xs="6" size-md="3" size-lg="3" size-xl="2">
               <gif-card-vue/>
             </ion-col>
-            <ion-col size-xs="6" size-md="3">
+            <ion-col size-xs="6" size-md="3" size-lg="3" size-xl="2">
               <gif-card-vue/>
             </ion-col>
-            <ion-col size-xs="6" size-md="3">
+            <ion-col size-xs="6" size-md="3" size-lg="3" size-xl="2">
               <gif-card-vue/>
             </ion-col>
           </ion-row>
@@ -105,36 +106,5 @@ export default {
 </script>
 
 <style scoped>
-#container {
-  text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-.card-image {
-  max-height: 300px;
-  width: 100%;
-}
 </style>
